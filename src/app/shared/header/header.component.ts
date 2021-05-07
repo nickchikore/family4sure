@@ -6,20 +6,20 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  showNavMobile: boolean;
-  innerWidth: number;
-  isMobile: boolean;
-  url: string;
-  ref: string;
-  id: number;
-  className: string;
+  // showNavMobile: boolean;
+  // innerWidth: number;
+  // isMobile: boolean;
+  // url: string;
+  // ref: string;
+  // id: number;
+  // className: string;
 
 
   nav = [
     {
       id: 1,
       ref: 'about-us',
-      url: 'home',
+      url: 'who-we-are',
       name: 'About us'
     },
     {
@@ -34,12 +34,12 @@ export class HeaderComponent implements OnInit {
       url: 'volunteers',
       name: 'Volunteers'
     },
-    {
-      id: 4,
-      ref: 'Mission',
-      url: 'volunteer/our-mission',
-      name: 'Mission'
-    },
+    // {
+    //   id: 4,
+    //   ref: 'Mission',
+    //   url: 'volunteer/our-mission',
+    //   name: 'Mission'
+    // },
     {
       id: 5,
       ref: 'Training',
@@ -65,25 +65,26 @@ export class HeaderComponent implements OnInit {
       name: 'Contact us'
     }
   ];
+  public isCollapsed = true;
   constructor() { }
+  //@HostListener('click', ['$event'])
+  // toggleNav(event){
+  //   this.showNavMobile = !this.showNavMobile;
+  //   console.log(event)
+  // }
 
-  toggleNav(){
-    this.showNavMobile = !this.showNavMobile;
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    this.innerWidth = window.innerWidth;
-    if (this.innerWidth <= 769){
-      this.isMobile = true;
-    }
-    else {
-      this.isMobile = false;
-    }
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event) {
+  //   this.innerWidth = window.innerWidth;
+  //   if (this.innerWidth <= 769){
+  //     this.isMobile = true;
+  //   }
+  //   else {
+  //     this.isMobile = false;
+  //   }
+  // }
 
   ngOnInit() {
-    this.isMobile = (window.innerWidth) <= 769;
 
   }
 

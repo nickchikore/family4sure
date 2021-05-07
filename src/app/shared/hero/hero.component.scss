@@ -1,6 +1,14 @@
 :host {
   display: flex;
   flex-direction: column;
+  &.under-construction {
+    .container {
+      min-height: calc(100vh - 70px);
+    }
+    .jumbotron{
+      min-height: 100vh;
+    }
+  }
   * + * {
     margin-top: 1rem;
   }
@@ -27,6 +35,8 @@
     position: relative;
     min-height: 600px;
     width: 100vw;
+    position: relative;
+    top: -4rem;
   }
 
   .btn-link {
@@ -42,7 +52,6 @@
   }
   .jumbotron {
     height: auto;
-    padding: 0;
     justify-content: flex-start;
     align-items: center;
     display: flex;
@@ -74,6 +83,8 @@
         background-color: #027fa2ff;
         background-image: url("./../../../assets/img/heart-hands.jpg");
         background-position: left center;
+        //transform: translateY(-4rem);
+
       }
       .btn-link {
         color: #027fa2ff;
@@ -118,7 +129,7 @@
     }
   }
 
-  &.stats {
+  &.stats, &.resources {
     .jumbotron {
       background-color: #143e7c;
       color: white;
@@ -148,4 +159,23 @@
       }
     }
   }
+  &.contact {
+    //min-height: calc(100vh - 70px);
+    .jumbotron {
+      background-color: #91c03a;
+      color: white;
+      .heroImg {
+        background-color: #143e7c;
+        background-image: url("./../../../assets/img/volunteer.jpg");
+        background-position: left center;
+      }
+      .btn-link {
+        color: #143e7c;
+        background-color: #e1e1e1;
+      }
+    }
+  }
+
 }
+
+

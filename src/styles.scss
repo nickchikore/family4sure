@@ -31,6 +31,7 @@ body {
   background-size: cover;
   background-position: center center;
   width: 100vw;
+  min-height: 100vh;
 }
 h1,
 h2,
@@ -444,6 +445,25 @@ h5 {
           }
         }
       }
+    }
+  }
+}
+ngb-accordion.accordion {
+  width: 100vw;
+  .card {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    .card-body {
+      color: #0b7fa2;
+      font-family: "Montserrat", sans-serif;
+    }
+    h4{
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    .btn-link {
+      color: #0b7fa2;
     }
   }
 }

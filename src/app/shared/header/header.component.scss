@@ -29,10 +29,20 @@
   background: #e8f7fc;
   width: 100%;
 }
-
+.navbar{
+  background: #067fa2;
+}
 li:hover a.nav-link + .subnav {
   max-height: 200px;
 }
 .subnav li:hover {
   background-color: #455a63;
+}
+.navbar-nav .nav-link{
+  //color: #07b2e5;
+  color: #d6fbf4;
+}
+:host{
+  font-family: 'Raleway', sans-serif;
+
 }

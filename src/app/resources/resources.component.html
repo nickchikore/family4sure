@@ -1,1 +1,57 @@
+<app-section
+  [Title]="'Resources and important information'"
+  [Para1]="
+    'You can find most of the extra information about our work in this section. We have a few documents you can download as well as some frequently asked questions that have been answered'
+  "
+  [hasTitle]="true"
+  [hasHeroImg]="true"
+  [hasCTA]="false"
+  [isMobile]="true"
+  [btnAttr]="'btn-start'"
+  class="resources"
+>
+  <div class="container">
+
+<ngb-accordion [closeOthers]="true" activeIds="static-1">
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <h4>Statistics and facts about B.A.M.E</h4>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      Evidently COVID-19 has left people at more risks of isolation, increased anxiety, depression and loneliness (UCL, 2020). Main risk factors being people with lower income, and from BAME background (UCL, 2020). Therefore our bespoke volunteer led befriending service will take time to help these people reach their potential through talking therapy and group therapy sessions. Intervening early to tackle loneliness and social isolation during the COVID-19 will help to prevent more health and care needs from developing, as well as aiding community resilience and recovery (Local Government association, 2021).
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <h4>Useful links and organisations</h4>
+    </ng-template>
+    <ng-template ngbPanelContent>
+
+      <p>Here are some useful links to get more information about the work we are engaged in</p>
+    <ul>
+      <li><a href="">Link 1</a></li>
+      <li><a href="">Link 2</a></li>
+      <li><a href="">Link 3</a></li>
+    </ul>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <h4>Downloads and helpful documentation</h4>
+    </ng-template>
+    <ng-template ngbPanelContent>
+
+      <h4>Download documents</h4>
+      <ul class="documents">
+        <li><a href="">Volunteer Application pack</a></li>
+        <li><a href="">DBS form</a></li>
+        <li><a href="">Information pack</a></li>
+
+      </ul>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
+  </div>
+
 
