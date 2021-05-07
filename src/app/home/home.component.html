@@ -1,0 +1,68 @@
+<app-section
+  [Title]="'Who we are'"
+  [Para1]="
+    'Family4sure promotes social inclusion for BAME people and families in Essex.'
+  "
+  [Para2]="
+    'We are a non-profit organisation which provides networking, counselling and a befriending platform for social integration.'
+  "
+  [cta]="'Discover more!'"
+  [hasCTA]="true"
+  [hasExtraContent]="true"
+  [hasTitle]="true"
+  [hasHeroImg]="true"
+  [isMobile]="true"
+  [btnAttr]="'btn-end'"
+  [ctaURL]="'/contact-us'"
+  class="about-us"
+></app-section>
+<app-section
+  [Title]="'Our Purpose'"
+  [Para1]="
+    'Family4sure exists to promote social inclusion for excluded BAME individuals and families in Essex.'
+  "
+  [cta]="'Discover more!'"
+  [hasTitle]="true"
+  [hasHeroImg]="true"
+  [isMobile]="true"
+  [btnAttr]="'btn-end'"
+  class="mission"
+></app-section>
+
+<app-section
+  [subTitle]="'Our Projects'"
+  [Title]="
+    'We are please to say Family4Sure as an organisation will be running a number of the projects to help our communities in modern society. '
+  "
+  [hasTitle]="true"
+  [hasSubTitle]="true"
+  [isMobile]="true"
+  [btnAttr]="'btn-end'"
+  [ctaURL]="'/friend-in-deed'"
+  class="our-work"
+>
+  <div class="container projects">
+    <app-tile
+      [title]="'Friend in Deed'"
+      [summary]="
+        'Our flagship project FRIEND IN DEED is fully funded by the National lottery and that enables us to provide our services free of charge.'
+      "
+      [cta]="'Discover more'"
+      [url]="'projects/friend-in-deed'"
+      [imgUrl]=""
+      [tileClass]="'friend-in-need'"
+    ></app-tile>
+  </div>
+</app-section>
+<app-section
+  [Title]="'Did you know'"
+  [subTitle]="'BAME population in Essex is fast growing (JSNA, 2019).'"
+  [Para1]="
+    'Evidently COVID-19 has left people at more risks of isolation, increased anxiety, depression and loneliness (UCL, 2020). Main risk factors being people with lower income, and from BAME background (UCL, 2020). Therefore our bespoke volunteer led befriending service will take time to help these people reach their potential through talking therapy and group therapy sessions. Intervening early to tackle loneliness and social isolation during the COVID-19 will help to prevent more health and care needs from developing, as well as aiding community resilience and recovery (Local Government association, 2021).'
+  "
+  [hasTitle]="true"
+  [hasHeroImg]="true"
+  [isMobile]="true"
+  [hasSubTitle]="true"
+  class="stats"
+></app-section>

@@ -1,0 +1,151 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  * + * {
+    margin-top: 1rem;
+  }
+  .display {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 100;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 100;
+  }
+  .heroImg {
+    display: flex;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    min-height: 600px;
+    width: 100vw;
+  }
+
+  .btn-link {
+    font-weight: 400;
+    text-decoration: none;
+    width: max-content;
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  .jumbotron {
+    height: auto;
+    padding: 0;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .section-content {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .btn-wrapper {
+    margin-top: 1rem;
+    &.btn-end {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  .container {
+    min-height: 50vh;
+    display: flex;
+  }
+  &.about-us {
+    .jumbotron {
+      background-color: #027fa2ff;
+      color: white;
+      .heroImg {
+        background-color: #027fa2ff;
+        background-image: url("./../../../assets/img/heart-hands.jpg");
+        background-position: left center;
+      }
+      .btn-link {
+        color: #027fa2ff;
+        background-color: #e1e1e1;
+      }
+    }
+  }
+  &.mission,
+  &.ethos {
+    .jumbotron {
+      background-color: #96af3bff;
+      color: white;
+      .heroImg {
+        background-color: #96af3bff;
+        background-image: url("./../../../assets/img/happy.jpg");
+        background-position: left center;
+      }
+      .btn-link {
+        color: #96af3bff;
+        background-color: #e1e1e1;
+      }
+    }
+  }
+  &.our-work,
+  &.friend-in-deed {
+    .jumbotron {
+      background-color: #19a5cc;
+      color: white;
+      padding-bottom: 2rem;
+      .heroImg {
+        background-color: #19a5cc;
+        background-image: url("./../../../assets/img/sisters.jpg");
+        background-position: left center;
+      }
+      .btn-link {
+        color: #19a5cc;
+        background-color: white;
+      }
+    }
+    .subtitle {
+      transform: translateY(30px);
+    }
+  }
+
+  &.stats {
+    .jumbotron {
+      background-color: #143e7c;
+      color: white;
+      .heroImg {
+        background-color: #143e7c;
+        background-image: url("./../../../assets/img/stats.jpg");
+        background-position: left center;
+      }
+      .btn-link {
+        color: #143e7c;
+        background-color: #e1e1e1;
+      }
+    }
+  }
+  &.volunteering {
+    .jumbotron {
+      background-color: #143e7c;
+      color: white;
+      .heroImg {
+        background-color: #143e7c;
+        background-image: url("./../../../assets/img/volunteer.jpg");
+        background-position: left center;
+      }
+      .btn-link {
+        color: #143e7c;
+        background-color: #e1e1e1;
+      }
+    }
+  }
+}

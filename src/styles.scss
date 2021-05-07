@@ -1,1 +1,450 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+//@import "~bootstrap/scss/bootstrap";
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&family=Open+Sans&display=swap");
+
+//vars
+$cyan-process: #02b3e5ff;
+$android-green: #90bf3bff;
+$tea-green: #d5e6b2ff;
+$non-photo-blue: #9ae8feff;
+$cg-blue: #027fa2ff;
+$sap-green: #5e7c27ff;
+$davys-grey: #525252ff;
+$cerulean-crayola: #1d9ecaff;
+$apple-green: #96af3bff;
+$pale-spring-bud: #d7e0b2ff;
+$non-photo-blue: #a6dff2ff;
+$teal-blue: #15708fff;
+$dark-olive-green: #627227ff;
+$davys-grey: #525252ff;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  //max-width: 100vw;
+  //overflow: hidden;
+  margin: 0;
+  font-weight: 100;
+  background-image: url("./assets/img/happy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+}
+// .heading {
+//   font-size: 2em;
+//   line-height: 1.5em;
+//   font-weight: 100;
+//   .mobi & {
+//     font-weight: 300;
+//     line-height: 2em;
+//     font-size: 2em;
+//   }
+// }
+// app-root {
+//   display: flex;
+//   flex-direction: column;
+//   height: 100vh;
+//   overflow: auto;
+//   position: relative;
+// }
+
+// header,
+// app-article,
+// .section {
+//   width: inherit;
+// }
+// header {
+//   position: relative;
+//   padding: 8px;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   background-color: white;
+//   position: fixed;
+//   top: 0;
+//   z-index: 2;
+//   width: calc(100vw - 32px);
+//   &.fixed {
+//     position: fixed;
+//     top: 0;
+//   }
+//   //navigation
+//   .nav {
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     .trigger {
+//       position: relative;
+//       width: 40px;
+//       height: 40px;
+//       display: flex;
+//       flex-direction: column;
+//       border: 2px solid $cg-blue;
+//       border-radius: 4px;
+//       //margin-bottom: 16px;
+//       justify-content: center;
+//       align-items: center;
+//       * {
+//         width: 36px;
+//         height: 2px;
+//         background: $cg-blue;
+//       }
+//       * + * {
+//         margin-top: 8px;
+//       }
+//     }
+//     ul {
+//       margin: 0;
+//       padding: 0;
+//       list-style: none;
+//       flex: 1;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//     }
+//   }
+//   //brand
+//   .brand {
+//     a {
+//       height: auto;
+//       display: flex;
+//       width: fit-content;
+
+//       img {
+//         max-width: 100%;
+//         height: 60px;
+//         .mobi & {
+//           height: 40px;
+//         }
+//       }
+//     }
+//   }
+
+//   &.mobi {
+//     padding: 8px 16px;
+//     .nav {
+//       flex: 1 1;
+//       flex-direction: column;
+//       justify-content: center;
+//       ul {
+//         position: absolute;
+//         top: calc(100% + 8px);
+//         width: 100vw;
+//         height: calc(100vh - 76px);
+//         right: calc(-100vw - 16px);
+//         z-index: 2;
+//         background: black;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: unset;
+//         align-items: unset;
+//         li a {
+//           padding: 12px 6px;
+//           justify-content: flex-end;
+//           font-weight: 600;
+//           text-transform: uppercase;
+//         }
+//         &.show {
+//           right: -16px;
+//           transition: 150ms right linear;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// //layout
+// .half-page-height {
+//   height: 50vh;
+// }
+
+// //banners
+// app-banner {
+//   display: flex;
+//   height: 50vh;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center center;
+//   position: relative;
+//   min-height: 600px;
+//   &:before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 1;
+//     background: rgb(31 127 162 / 20%); //rgba(black, 0.4);
+//   }
+//   .about & {
+//     background-color: $cg-blue;
+//     background-image: url("./assets/img/heart-hands.jpg");
+//     background-position: left center;
+//   }
+//   .mission & {
+//     background-color: $apple-green;
+//     background-image: url("./assets/img/happy.jpg");
+//   }
+//   .our-work & {
+//     background-color: $cg-blue;
+//     background-image: url("./assets/img/sisters.jpg");
+//   }
+//   .covid & {
+//     background-color: $dark-olive-green;
+//     background-image: url("./assets/img/stats.jpg");
+//   }
+//   .contact-us & {
+//     background-color: #027fa2c2;
+
+//     background-image: url("./assets/img/family.jpg");
+//     background-position: center bottom;
+//   }
+//   .mobi & {
+//     min-height: 400px;
+//   }
+// }
+
+// div:not(.mobi) {
+//   .our-work {
+//     height: calc(150vh - 76px);
+//   }
+//   .contact-us {
+//     height: calc(170vh - 76px);
+//   }
+//   article {
+//     height: calc(120vh - 76px);
+//   }
+// }
+// //articles
+// .details {
+//   letter-spacing: 0.025em;
+//   line-height: 1.25rem;
+//   font-size: 1rem;
+
+//   display: flex;
+//   flex-direction: column;
+//   color: white;
+//   .desc {
+//     font-size: 1rem;
+//     line-height: 1.5rem;
+//   }
+//   > * {
+//     margin: 0;
+//     + * {
+//       margin-top: 16px;
+//     }
+//     max-width: calc(100vw - 30%);
+//   }
+//   .about & {
+//     background-color: $cg-blue;
+//   }
+//   .mission & {
+//     background-color: $apple-green;
+//   }
+//   .our-work & {
+//     background-color: $teal-blue;
+//   }
+//   .covid & {
+//     background-color: $dark-olive-green;
+//   }
+//   .contact-us & {
+//     //background-color: $davys-grey;
+//   }
+//   .mobi & {
+//     padding: 1rem;
+//     min-height: calc(50vh - 2rem);
+//     align-items: flex-start;
+//     justify-content: center;
+//     > * {
+//       max-width: inherit;
+//     }
+//   }
+// }
+// .contact-us .form {
+//   //background-color: $davys-grey;
+//   color: white;
+// }
+// .light {
+//   color: white;
+// }
+// //form
+// form {
+//   display: flex;
+//   flex-direction: column;
+//   padding: 1rem;
+//   textarea {
+//     min-height: 100px;
+//   }
+// }
+
+// .form-row {
+//   display: inherit;
+//   padding: 8px;
+//   flex-direction: column;
+// }
+
+// .form-row + * {
+//   margin-top: 8px;
+// }
+
+// .form-row > * + * {
+//   margin-top: 8px;
+// }
+
+// input[type="text"],
+// textarea,
+// button {
+//   padding: 12px;
+//   border: 1px solid $cerulean-crayola;
+//   border-radius: 4px;
+// }
+
+// button.btn.submit {
+//   background: $cerulean-crayola;
+//   border: none;
+//   color: white;
+// }
+// //navigation
+// nav li {
+//   margin: 4px 0;
+// }
+
+// nav li a {
+//   padding: 6px;
+//   display: flex;
+//   color: $cg-blue;
+//   text-decoration: none;
+// }
+// //trigger
+// .trigger.close span:nth-child(2) {
+//   display: none;
+// }
+// .trigger.close span:nth-child(1) {
+//   transform: rotate(45deg);
+//   position: absolute;
+//   top: 18px;
+// }
+// .trigger.close span:nth-child(3) {
+//   transform: rotate(-45deg);
+//   margin-top: 0;
+// }
+
+// .contact-us {
+//   background-color: #027fa2c2;
+// }
+// //basnner
+// .fullspread {
+//   .ourWork,
+//   .covid {
+//     height: 120vh;
+//     .details {
+//       height: inherit;
+//     }
+//   }
+//   app-banner {
+//     height: 75vh;
+//   }
+//   article {
+//     height: calc(100vh - 76px);
+//     background-color: #027fa2ff;
+//     display: flex;
+//     flex-direction: column;
+//     &.contact-us {
+//       background-color: #027fa2c2;
+//     }
+//   }
+
+//   .details {
+//     height: 50%;
+//     justify-content: center;
+//     align-items: center;
+//   }
+//   .form {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding-bottom: 100px;
+//     form {
+//       width: 50%;
+//       max-width: 400px;
+//     }
+//   }
+// }
+.card {
+  flex-direction: row;
+  color: #19a5cc;
+  .card-img {
+    width: 30%;
+    height: inherit;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &.friend-in-need {
+      background-image: url("../src/assets/img/sisters.jpg");
+    }
+  }
+}
+.projects {
+  margin-bottom: 3rem;
+  app-tile {
+    width: 300px;
+  }
+}
+.btn {
+  opacity: 0.85;
+  &:hover {
+    opacity: 1;
+  }
+  &.btn-primary {
+    color: #fff;
+    background-color: #19a5cc;
+    border-color: #19a5cc;
+  }
+}
+.vol-list {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+  app-card {
+    width: 30%;
+    background-clip: border-box;
+    border: 1px solid rgb(44 165 204);
+    border-radius: 4px;
+    .card {
+      background-color: transparent;
+      border: none;
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .card-link {
+          font-weight: 400;
+          text-decoration: none;
+          width: max-content;
+          padding: 0.5em 1em;
+          border-radius: 0.25em;
+          cursor: pointer;
+          color: white;
+          border: 1px solid;
+          opacity: 0.6;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<div class="jumbotron jumbotron-fluid">
+  <ng-container *ngIf="hasHeroImg">
+    <div class="heroImg {{ classInput }}" [class.mobi]="isMobile"></div>
+  </ng-container>
+  <div class="container">
+    <div class="section-content">
+      <h2 class="display" *ngIf="hasTitle">{{ Title }}</h2>
+      <h3 class="subtitle" *ngIf="hasSubTitle">{{ subTitle }}</h3>
+
+      <p class="lead">
+        {{ Para1 }}
+      </p>
+      <p class="lead" *ngIf="hasExtraContent">
+        {{ Para2 }}
+      </p>
+      <div class="btn-wrapper" class="{{ btnAttr }}">
+        <a href="{{ ctaURL }}" class="btn-link" *ngIf="hasCTA">{{ cta }}</a>
+      </div>
+    </div>
+  </div>
+  <ng-content></ng-content>
+</div>

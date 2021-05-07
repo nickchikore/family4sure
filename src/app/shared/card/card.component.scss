@@ -1,0 +1,15 @@
+:host {
+  .vol-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    .card {
+      width: 30%;
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  }
+}
