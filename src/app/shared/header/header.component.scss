@@ -1,0 +1,38 @@
+.navbar-brand {
+  max-width: 50%;
+  * {
+    max-width: 150px;
+  }
+}
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;
+}
+.bg-light {
+  background-color: #e8f7fc !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #34bee9;
+}
+.nav-item {
+  position: relative;
+}
+.subnav ul {
+  padding: 0;
+  list-style: none;
+}
+
+.subnav {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  background: #e8f7fc;
+  width: 100%;
+}
+
+li:hover a.nav-link + .subnav {
+  max-height: 200px;
+}
+.subnav li:hover {
+  background-color: #455a63;
+}
