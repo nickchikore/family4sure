@@ -8,6 +8,7 @@ import { MainComponent } from './main/main.component';
 import {RouterModule} from "@angular/router";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     TileComponent,
     CardComponent,
     MainComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    FooterComponent
 ],
   exports: [
     HeaderComponent,

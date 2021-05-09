@@ -20,13 +20,15 @@ export class HeroComponent implements OnInit {
   @Input() hasCTA: boolean;
   @Input() isMobile: boolean;
   @Input() hasHeroImg: boolean;
+  @Input() external: any;
 
-  constructor() { 
+  constructor() {
     this.hasCTA = false;
     this.hasTitle = false;
     this.hasHeroImg = false;
     this.isMobile = false;
     this.hasSubTitle = false;
+    this.external = false;
   }
 
   ngOnInit() {

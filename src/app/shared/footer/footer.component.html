@@ -1,0 +1,11 @@
+<div class="container footer-wrapper">
+  <nav class="nav flex-column" *ngFor="let item of nav">
+    <a class="nav-link" routerLink="{{ item.url }}">{{ item.name }}</a>
+  </nav>
+  <nav class="nav flex-column" *ngFor="let item of externalmedia">
+    <a class="nav-link" routerLink="{{ item.url }}">{{ item.name }}</a>
+  </nav>
+  <nav class="nav flex-column" *ngFor="let item of corporateInfo">
+    <a class="nav-link" routerLink="{{ item.url }}">{{ item.name }}</a>
+  </nav>
+</div>

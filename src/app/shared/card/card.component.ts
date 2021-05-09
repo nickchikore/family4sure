@@ -17,7 +17,7 @@ export class CardComponent implements OnInit {
   @Input() iconRef: string;
   @Input() hasTitle: boolean;
   @Input() hasDescription: boolean;
-  @Input() hasCta: boolean;
+  @Input() hasCta = true;
   @Input() hasSubtitle: boolean;
   @Input() hasIcon: boolean;
 

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "fam4sure": {
+    "family4sure": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fam4sure",
+            "outputPath": "dist/family4sure",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fam4sure:build"
+            "browserTarget": "family4sure:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "fam4sure:build:production"
+              "browserTarget": "family4sure:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fam4sure:build"
+            "browserTarget": "family4sure:build"
           }
         },
         "test": {
@@ -118,18 +118,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "fam4sure:serve"
+            "devServerTarget": "family4sure:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "fam4sure:serve:production"
+              "devServerTarget": "family4sure:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "fam4sure",
+  "defaultProject": "family4sure",
   "cli": {
     "analytics": "9a4ec834-5019-4d6f-882f-7ed28bbdd540"
   }

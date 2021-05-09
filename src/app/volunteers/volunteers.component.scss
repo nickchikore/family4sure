@@ -1,0 +1,13 @@
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 85%;
+  transform: translateY(-100px);
+  a.btn-link {
+    width: fit-content;
+    padding: 12px;
+    border: 1px solid;
+    border-radius: 4px;
+  }
+}

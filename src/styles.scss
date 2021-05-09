@@ -40,348 +40,6 @@ h4,
 h5 {
   font-family: "Montserrat", sans-serif;
 }
-// .heading {
-//   font-size: 2em;
-//   line-height: 1.5em;
-//   font-weight: 100;
-//   .mobi & {
-//     font-weight: 300;
-//     line-height: 2em;
-//     font-size: 2em;
-//   }
-// }
-// app-root {
-//   display: flex;
-//   flex-direction: column;
-//   height: 100vh;
-//   overflow: auto;
-//   position: relative;
-// }
-
-// header,
-// app-article,
-// .section {
-//   width: inherit;
-// }
-// header {
-//   position: relative;
-//   padding: 8px;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   background-color: white;
-//   position: fixed;
-//   top: 0;
-//   z-index: 2;
-//   width: calc(100vw - 32px);
-//   &.fixed {
-//     position: fixed;
-//     top: 0;
-//   }
-//   //navigation
-//   .nav {
-//     position: relative;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-end;
-//     .trigger {
-//       position: relative;
-//       width: 40px;
-//       height: 40px;
-//       display: flex;
-//       flex-direction: column;
-//       border: 2px solid $cg-blue;
-//       border-radius: 4px;
-//       //margin-bottom: 16px;
-//       justify-content: center;
-//       align-items: center;
-//       * {
-//         width: 36px;
-//         height: 2px;
-//         background: $cg-blue;
-//       }
-//       * + * {
-//         margin-top: 8px;
-//       }
-//     }
-//     ul {
-//       margin: 0;
-//       padding: 0;
-//       list-style: none;
-//       flex: 1;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//     }
-//   }
-//   //brand
-//   .brand {
-//     a {
-//       height: auto;
-//       display: flex;
-//       width: fit-content;
-
-//       img {
-//         max-width: 100%;
-//         height: 60px;
-//         .mobi & {
-//           height: 40px;
-//         }
-//       }
-//     }
-//   }
-
-//   &.mobi {
-//     padding: 8px 16px;
-//     .nav {
-//       flex: 1 1;
-//       flex-direction: column;
-//       justify-content: center;
-//       ul {
-//         position: absolute;
-//         top: calc(100% + 8px);
-//         width: 100vw;
-//         height: calc(100vh - 76px);
-//         right: calc(-100vw - 16px);
-//         z-index: 2;
-//         background: black;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: unset;
-//         align-items: unset;
-//         li a {
-//           padding: 12px 6px;
-//           justify-content: flex-end;
-//           font-weight: 600;
-//           text-transform: uppercase;
-//         }
-//         &.show {
-//           right: -16px;
-//           transition: 150ms right linear;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// //layout
-// .half-page-height {
-//   height: 50vh;
-// }
-
-// //banners
-// app-banner {
-//   display: flex;
-//   height: 50vh;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center center;
-//   position: relative;
-//   min-height: 600px;
-//   &:before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     z-index: 1;
-//     background: rgb(31 127 162 / 20%); //rgba(black, 0.4);
-//   }
-//   .about & {
-//     background-color: $cg-blue;
-//     background-image: url("./assets/img/heart-hands.jpg");
-//     background-position: left center;
-//   }
-//   .mission & {
-//     background-color: $apple-green;
-//     background-image: url("./assets/img/happy.jpg");
-//   }
-//   .our-work & {
-//     background-color: $cg-blue;
-//     background-image: url("./assets/img/sisters.jpg");
-//   }
-//   .covid & {
-//     background-color: $dark-olive-green;
-//     background-image: url("./assets/img/stats.jpg");
-//   }
-//   .contact-us & {
-//     background-color: #027fa2c2;
-
-//     background-image: url("./assets/img/family.jpg");
-//     background-position: center bottom;
-//   }
-//   .mobi & {
-//     min-height: 400px;
-//   }
-// }
-
-// div:not(.mobi) {
-//   .our-work {
-//     height: calc(150vh - 76px);
-//   }
-//   .contact-us {
-//     height: calc(170vh - 76px);
-//   }
-//   article {
-//     height: calc(120vh - 76px);
-//   }
-// }
-// //articles
-// .details {
-//   letter-spacing: 0.025em;
-//   line-height: 1.25rem;
-//   font-size: 1rem;
-
-//   display: flex;
-//   flex-direction: column;
-//   color: white;
-//   .desc {
-//     font-size: 1rem;
-//     line-height: 1.5rem;
-//   }
-//   > * {
-//     margin: 0;
-//     + * {
-//       margin-top: 16px;
-//     }
-//     max-width: calc(100vw - 30%);
-//   }
-//   .about & {
-//     background-color: $cg-blue;
-//   }
-//   .mission & {
-//     background-color: $apple-green;
-//   }
-//   .our-work & {
-//     background-color: $teal-blue;
-//   }
-//   .covid & {
-//     background-color: $dark-olive-green;
-//   }
-//   .contact-us & {
-//     //background-color: $davys-grey;
-//   }
-//   .mobi & {
-//     padding: 1rem;
-//     min-height: calc(50vh - 2rem);
-//     align-items: flex-start;
-//     justify-content: center;
-//     > * {
-//       max-width: inherit;
-//     }
-//   }
-// }
-// .contact-us .form {
-//   //background-color: $davys-grey;
-//   color: white;
-// }
-// .light {
-//   color: white;
-// }
-// //form
-// form {
-//   display: flex;
-//   flex-direction: column;
-//   padding: 1rem;
-//   textarea {
-//     min-height: 100px;
-//   }
-// }
-
-// .form-row {
-//   display: inherit;
-//   padding: 8px;
-//   flex-direction: column;
-// }
-
-// .form-row + * {
-//   margin-top: 8px;
-// }
-
-// .form-row > * + * {
-//   margin-top: 8px;
-// }
-
-// input[type="text"],
-// textarea,
-// button {
-//   padding: 12px;
-//   border: 1px solid $cerulean-crayola;
-//   border-radius: 4px;
-// }
-
-// button.btn.submit {
-//   background: $cerulean-crayola;
-//   border: none;
-//   color: white;
-// }
-// //navigation
-// nav li {
-//   margin: 4px 0;
-// }
-
-// nav li a {
-//   padding: 6px;
-//   display: flex;
-//   color: $cg-blue;
-//   text-decoration: none;
-// }
-// //trigger
-// .trigger.close span:nth-child(2) {
-//   display: none;
-// }
-// .trigger.close span:nth-child(1) {
-//   transform: rotate(45deg);
-//   position: absolute;
-//   top: 18px;
-// }
-// .trigger.close span:nth-child(3) {
-//   transform: rotate(-45deg);
-//   margin-top: 0;
-// }
-
-// .contact-us {
-//   background-color: #027fa2c2;
-// }
-// //basnner
-// .fullspread {
-//   .ourWork,
-//   .covid {
-//     height: 120vh;
-//     .details {
-//       height: inherit;
-//     }
-//   }
-//   app-banner {
-//     height: 75vh;
-//   }
-//   article {
-//     height: calc(100vh - 76px);
-//     background-color: #027fa2ff;
-//     display: flex;
-//     flex-direction: column;
-//     &.contact-us {
-//       background-color: #027fa2c2;
-//     }
-//   }
-
-//   .details {
-//     height: 50%;
-//     justify-content: center;
-//     align-items: center;
-//   }
-//   .form {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     padding-bottom: 100px;
-//     form {
-//       width: 50%;
-//       max-width: 400px;
-//     }
-//   }
-// }
 .card {
   flex-direction: row;
   color: #19a5cc;
@@ -413,6 +71,10 @@ h5 {
     background-color: #19a5cc;
     border-color: #19a5cc;
   }
+}
+.btn-link{
+  color: #30b3e4;
+
 }
 .vol-list {
   display: flex;
@@ -464,6 +126,26 @@ ngb-accordion.accordion {
     }
     .btn-link {
       color: #0b7fa2;
+    }
+  }
+}
+
+.volunteering{
+  .btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 85%;
+    //transform: translateY(-100px);
+    a.btn-link {
+      width: fit-content;
+      padding: 12px;
+      border: 1px solid;
+      border-radius: 4px;
+      &:hover{
+        color: lighten(#0b7fa2, 40);
+        text-decoration: none;
+      }
     }
   }
 }

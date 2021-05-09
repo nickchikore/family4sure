@@ -13,8 +13,13 @@
       <p class="lead" *ngIf="hasExtraContent">
         {{ Para2 }}
       </p>
-      <div class="btn-wrapper" class="{{ btnAttr }}">
-        <a href="{{ ctaURL }}" class="btn-link" *ngIf="hasCTA">{{ cta }}</a>
+      <div class="btn-wrapper" class="{{ btnAttr }}" *ngIf="hasCTA">
+        <a routerLink="{{ ctaURL }}" class="btn-link" *ngIf="!external">{{
+          cta
+        }}</a>
+        <a href="{{ ctaURL }}" class="btn-link" *ngIf="external" target="_blank">{{
+          cta
+          }}</a>
       </div>
     </div>
   </div>

@@ -1,24 +1,25 @@
 <app-section
   [Title]="'Why not help out'"
   [Para1]="
-    'Do you have a passion for helping out others and need to put it to good use. At Family4Sure we could put your interests and talents to good use and train you to become a fully fledged volunteer in our growing organisation'
-  "
-  [cta]="'Find out more!'"
-  [ctaURL]="'/volunteers/apply-to-volunteer'"
+    'Do you have a passion for helping out others and need to put it to good use. At Family4Sure we could put your interests and talents to good use and train you to become a fully fledged volunteer in our growing organisation'"
+  [cta]="'Volunteer now!'"
+  [ctaURL]="'./assets/docs/volunteer-application-form.pdf'"
   [hasTitle]="true"
   [hasHeroImg]="true"
-  [hasCTA]="false"
+  [hasCTA]="true"
   [isMobile]="true"
   [btnAttr]="'btn-start'"
-  class="volunteering"
->
-  <a href="./assets/docs/volunteer-application-form.pages">Volunteer</a>
+  [external]="true"
+  class="volunteering">
+<!--  <div class="btn-wrapper mt-2 pb-3">-->
+<!--    <a class="btn-link" href="../assets/docs/volunteer-application-form.pdf">Volunteer now!</a>-->
+<!--  </div>-->
   <div class="vol-list">
     <app-card
       [title]="'Training'"
       [description]="'We will be offering online Befriender training'"
       [cta]="'Enquire now!'"
-      [ctaUrl]="'volunteer/training'"
+      [ctaUrl]="'family4sure/volunteer/training'"
       [cardClass]="'training'"
     ></app-card>
 
@@ -28,15 +29,16 @@
         'Our service is volunteer led services and most of the volunteers will be from BAME background and speak an additional language.'
       "
       [cta]="'Find out more!'"
-      [ctaUrl]="'volunteer/our-methods'"
+      [ctaUrl]="'family4sure/who-we-are'"
       [cardClass]="'ethos'"
+      [hasCta]="false"
     ></app-card>
 
     <app-card
       [title]="'Safeguarding'"
       [description]="'All our volunteers will be DBS checked'"
       [cta]="'Get more info!'"
-      [ctaUrl]="'volunteer/safeguarding'"
+      [ctaUrl]="'family4sure/volunteer/safeguarding'"
       [cardClass]="'safeguarding'"
     ></app-card>
   </div>
