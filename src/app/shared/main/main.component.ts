@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-main',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-
-  constructor() { }
+  public href: string = "";
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
+    const url =this.router.url;
+    this.href = url;
+    console.log(url)
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -61,7 +61,7 @@ export class FooterComponent implements OnInit {
     {
       id: 1,
       ref: 'facebook',
-      url: 'https://www.facebook.com/',
+      url: 'https://www.facebook.com/family4sure/',
       name: 'Facebook'
     },
     {
@@ -130,9 +130,10 @@ export class FooterComponent implements OnInit {
       ]
     }
   ];
-
+  @Input() hidden;
   constructor() {
     console.log(this.nav);
+    this.hidden = false;
   }
 
   ngOnInit(): void {

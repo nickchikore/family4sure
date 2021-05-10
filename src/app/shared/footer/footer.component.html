@@ -1,11 +1,26 @@
-<div class="container footer-wrapper">
-  <nav class="nav flex-column" *ngFor="let item of nav">
-    <a class="nav-link" routerLink="{{ item.url }}">{{ item.name }}</a>
+<div class="container footer-wrapper pt-5 pb-5">
+  <nav class="nav flex-column p-3">
+    <h5>Sitemap</h5>
+    <ul class="nav-items">
+      <li class="nav-item" *ngFor="let item of nav">
+        <a class="nav-link" routerLink="{{ item.url }}">{{ item.name }}</a>
+      </li>
+    </ul>
   </nav>
-  <nav class="nav flex-column" *ngFor="let item of externalmedia">
-    <a class="nav-link" routerLink="{{ item.url }}">{{ item.name }}</a>
+  <nav class="nav flex-column p-3">
+    <h5>Social media</h5>
+    <ul class="nav-items">
+      <li class="nav-item" *ngFor="let item of externalmedia">
+        <a class="nav-link" href="{{ item.url }}">{{ item.name }}</a>
+      </li>
+    </ul>
   </nav>
-  <nav class="nav flex-column" *ngFor="let item of corporateInfo">
+  <nav class="nav flex-column p-3" [hidden]="true">
+    <h5>Direct Contact</h5>
+    <ul class="nav-items">
+      <li class="nav-item" *ngFor="let item of corporateInfo">
     <a class="nav-link" routerLink="{{ item.url }}">{{ item.name }}</a>
+      </li>
+    </ul>
   </nav>
 </div>

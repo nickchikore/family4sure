@@ -39,8 +39,10 @@ li:hover a.nav-link + .subnav {
   background-color: #455a63;
 }
 .navbar-nav .nav-link{
-  //color: #07b2e5;
-  color: #d6fbf4;
+    color: #d6fbf4;
+    &:hover{
+      color: darken(#d6fbf4,20);
+    }
 }
 :host{
   font-family: 'Raleway', sans-serif;

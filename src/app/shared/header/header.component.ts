@@ -88,7 +88,10 @@ export class HeaderComponent implements OnInit {
       // );
     }
 
-
+@HostListener('click', ['$event'])
+showNavDetails(event){
+  console.log(event.target)
+}
   ngOnInit() {
 
   }
