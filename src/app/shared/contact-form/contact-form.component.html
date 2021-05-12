@@ -1,32 +1,110 @@
 <h3 class="pb-3">How can we help?</h3>
-<form action="" class="container">
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="mb-3">
+<form class="container" (ngSubmit)="contactFormSubmit()" #contactForm="ngForm" novalidate >
 
-    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-      <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+  <div class="form-row mb-3">
+    <label for="username" class="form-label">Name</label>
+    <input type="text"  [class.is-invalid]="nameInput.invalid && nameInput.touched" class="form-control" id="username" name="username" placeholder="Enter your name" aria-label="username" [(ngModel)]="userModel.name" #nameInput="ngModel" required>
+    <small class="text-danger mt-2" *ngIf="nameInput.invalid && nameInput.touched">Your name is required</small>
+  </div>
+  <div class="form-row mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control"id="email" name="email" placeholder="Please enter an email" [(ngModel)]="userModel.email" #emailInput="ngModel" required>
+    <small class="text-danger mt-2" *ngIf="emailInput.invalid && emailInput.touched">A valid email is required</small>
+  </div>
+
+  <div class="form-check mb-3">
+    <input type="checkbox" class="" id="callback" name="callback" [(ngModel)]="userModel.callback" #callbackInput="ngModel">
+    <label for="callback"  class="form-check-label">Would you like us to call you instead?</label>
+  </div>
+  <ng-container *ngIf="callbackInput.value === true">
+
+  <div class="form-row mb-3" [class.d-none]="callbackInput.value !== true">
+    <label for="username" class="form-label">Phone number</label>
+    <input type="tel" pattern="^\d{11}$" [class.is-invalid]="phoneInput.invalid && phoneInput.touched" class="form-control" id="phone" name="[phone]" placeholder="Enter your a phone number" aria-label="username" [(ngModel)]="userModel.phone" #phoneInput="ngModel" required>
+    <ng-container *ngIf="phoneInput.errors && (phoneInput.invalid || phoneInput.touched)">
+      <small class="text-danger mt-2" *ngIf="phoneInput.errors.required">A phone number is required</small>
+      <small class="text-danger mt-2" *ngIf="phoneInput.errors.pattern">The number provided is incorrect</small>
+
+    </ng-container>
+  </div>
+  </ng-container>
+
+  <div class="form-row mb-3">
+    <label for="topic" class="form-label">What is your enquiry about</label>
+    <select (blur)="validateTopic(topic.value)" (change)="validateTopic(topic.value)"
+            id="topic" name="topic" class="form-select form-select-lg mb-3"
+            [class.is-invalid]="topicHasError && topicInput.touched"
+            [(ngModel)]="userModel.topic" #topicInput="ngModel">
+      <option value="default" class="text-danger mt-2">Please select an option</option>
+      <option selected *ngFor="let enquiry of enquiries" value="{{enquiry.name}}">{{enquiry.name}}</option>
+      <small class="text-danger mt-2" *ngIf="!topicHasError || topicInput.untouched">Please selected a topic</small>
     </select>
+    {{ topicHasError}}
   </div>
-<!--  <div class="mb-3">-->
-<!--    <label for="formFile" class="form-label">Default file input example</label>-->
-<!--    <input class="form-control" type="file" id="formFile">-->
+  <div class="form-row mb-3">
+    <label for="enquiry" class="form-label">More detail about your enquiry</label>
+    <textarea class="form-control p-2" id="enquiry" name="enquiry" rows="3" [(ngModel)]="userModel.enquiry" placeholder="Please fill in a message"></textarea>
+  </div>
+  <div class="form-check mb-3">
+    <input type="checkbox" checked class="" id="subscriber" name="subscriber" [(ngModel)]="userModel.subscribe" #subscriberInput="ngModel">
+    <label for="subscriber"  class="form-check-label">Send newsletters and information to my email</label>
+  </div>
+<!--<div ngModelGroup="address">-->
+<!--  <div class="form-row mb-3">-->
+<!--    <label for="houseNumber" class="form-label">House name/number</label>-->
+<!--    <input type="text" class="form-control" id="houseNumber" name="houseNumber"-->
+<!--           [(ngModel)]="houseNumber" #houseNumberInput="ngModel" required>-->
+<!--    <small class="msg is-invalid"-->
+<!--           *ngIf="houseNumberInput.invalid && houseNumberInput.touched">-->
+<!--      Your name is required-->
+<!--    </small>-->
 <!--  </div>-->
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
+<!--  <div class="form-row mb-3">-->
+<!--    <label for="street" class="form-label">Street</label>-->
+<!--    <input type="text" class="form-control" id="street" name="street"-->
+<!--           [(ngModel)]="street" #streetInput="ngModel" required>-->
+<!--    <small class="msg is-invalid"-->
+<!--           *ngIf="streetInput.invalid && streetInput.touched">-->
+<!--      Your name is required-->
+<!--    </small>-->
+<!--  </div>-->
+<!--  <div class="form-row mb-3">-->
+<!--    <label for="city" class="form-label">Town/City</label>-->
+<!--    <input type="text" class="form-control" id="city" name="city"-->
+<!--           [(ngModel)]="city" #cityInput="ngModel" required>-->
+<!--    <small class="msg is-invalid"-->
+<!--           *ngIf="cityInput.invalid && cityInput.touched">-->
+<!--      Your name is required-->
+<!--    </small>-->
+<!--  </div>-->
+<!--  <div class="form-row mb-3">-->
+<!--    <label for="county" class="form-label">County</label>-->
+<!--    <input type="text" class="form-control" id="county" name="county"-->
+<!--           [(ngModel)]="county" #countyInput="ngModel" required>-->
+<!--    <small class="msg is-invalid"-->
+<!--           *ngIf="countyInput.invalid && countyInput.touched">-->
+<!--      Your name is required-->
+<!--    </small>-->
+<!--  </div>-->
+<!--  <div class="form-row mb-3">-->
+<!--    <label for="postcode" class="form-label">Post Code</label>-->
+<!--    <input type="text" class="form-control" id="postcode" name="postcode"-->
+<!--           [(ngModel)]="postcode" #postcodeInput="ngModel" required>-->
+<!--    <small class="msg is-invalid"-->
+<!--           *ngIf="postcodeInput.invalid && postcodeInput.touched">-->
+<!--      Your name is required-->
+<!--    </small>-->
+<!--  </div>-->
+
+<!--</div>-->
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-primary" type="submit" [disabled]="contactForm.invalid || topicHasError">Submit form</button>
   </div>
+
+  {{userModel | json }}
+  {{contactForm.invalid }}
 </form>
+
+
 
 

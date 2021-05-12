@@ -1,0 +1,12 @@
+.form-row{
+  display: flex;
+  flex-direction: column;
+
+}
+.btn-primary:disabled {
+  //background: grey;
+  //border: none;
+  //opacity: .3;
+  //cursor: none;
+  display: none;
+}
