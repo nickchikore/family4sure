@@ -132,7 +132,6 @@ export class FooterComponent implements OnInit {
   ];
   @Input() hidden;
   constructor() {
-    console.log(this.nav);
     this.hidden = false;
   }
 

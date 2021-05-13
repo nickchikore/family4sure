@@ -70,56 +70,7 @@ export class HeaderComponent implements OnInit {
           }
         )
       );
-      // .subscribe(
-      //   (event: NavigationStart) => {
-      //     // console.log('NavigationStart Group');
-      //     // console.log('NavigationID :', event.id);
-      //     // console.log('route :', event.url);
-      //     // console.log('route :', event.navigationTrigger);
-      //     // console.log( 'trigger :', event.navigationTrigger );
-      //     if ( event.restoredState ) {
-      //       // console.warn(
-      //       //   'restoring navigation id:',
-      //       //   event.restoredState.navigationId
-      //       // );
-      //     }
-      //     //console.groupEnd();
-      //   }
-      // );
     }
-
-@HostListener('click', ['$event'])
-showNavDetails(event){
-  console.log(event.target)
-}
   ngOnInit() {
-
   }
-
 }
-
-// showNavMobile: boolean;
-// innerWidth: number;
-// isMobile: boolean;
-// url: string;
-// ref: string;
-// id: number;
-// className: string;
-
-
-// @HostListener('click', ['$event'])
-// toggleNav(event){
-//   this.showNavMobile = !this.showNavMobile;
-//   console.log(event)
-// }
-
-// @HostListener('window:resize', ['$event'])
-// onResize(event) {
-//   this.innerWidth = window.innerWidth;
-//   if (this.innerWidth <= 769){
-//     this.isMobile = true;
-//   }
-//   else {
-//     this.isMobile = false;
-//   }
-// }

@@ -1,7 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Importing Bootstrap SCSS file. */
-/* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&family=Open+Sans&display=swap");
 
 //vars
@@ -21,12 +17,12 @@ $dark-olive-green: #627227ff;
 $davys-grey: #525252ff;
 
 body {
-  font-family: "Open Sans", sans-serif;
-  //max-width: 100vw;
-  //overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin: 0;
   font-weight: 100;
-  background-image: url("./assets/img/happy.jpg");
+  background-image: url("/assets/img/happy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

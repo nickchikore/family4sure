@@ -36,7 +36,7 @@ import { MissionComponent } from './mission/mission.component';
     AppRoutingModule,
     RouterModule,
     NgbModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,18 +5,20 @@ import { HeroComponent } from './hero/hero.component';
 import { TileComponent } from './tile/tile.component';
 import { CardComponent } from './card/card.component';
 import { MainComponent } from './main/main.component';
-import {RouterModule} from "@angular/router";
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {RouterModule} from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   declarations: [
     HeaderComponent,
