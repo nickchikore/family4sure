@@ -47,7 +47,10 @@ h5 {
     background-size: cover;
     background-repeat: no-repeat;
     &.friend-in-need {
-      background-image: url("../src/assets/img/sisters.jpg");
+      background-image: url("/assets/img/sisters.jpg");
+    }
+    &.chido {
+      background-image: url("/assets/img/happy.jpg");
     }
   }
 }

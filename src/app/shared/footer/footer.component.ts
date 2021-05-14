@@ -73,7 +73,7 @@ export class FooterComponent implements OnInit {
     {
       id: 3,
       ref: 'instagram',
-      url: 'https://www.instagram.com/',
+      url: 'https://www.instagram.com/family_4sure',
       name: 'instagram'
     },
     {
@@ -95,19 +95,19 @@ export class FooterComponent implements OnInit {
       email: 'admin@family4sure.co.uk',
       phone: {
         office: 1234567890,
-        mobile: 7912345678,
+        mobile: 7765037373,
         fax: 1234678909
       },
       affiliates: [
         {
           partners: [
             {
-              name: '',
+              name: 'Palmers Butchers',
               reference: '',
-              email: '',
+              email: 'asdajsgjda',
               phone: 1234567890,
-              image: '',
-              url: ''
+              image: 'logo',
+              url: 'website'
             }
           ],
           accreditations: [

@@ -16,7 +16,7 @@ export class ContactFormComponent implements OnInit {
   userModel = new User('Nick', 'nick@gmail.com', null, 'default', '', true, false);
   topicHasError = true ;
   submitted = false;
-  errorMsg = '';
+  errorMsg: any;
   topics =   [
     {id: 1, name: 'Becoming a volunteer'},
     {id: 2, name: 'Funding a project'},
@@ -37,14 +37,15 @@ export class ContactFormComponent implements OnInit {
     }
   }
   contactFormSubmit() {
-    // const msg = `My name is ${this.username}, my  email is ${this.email}, i am interested in ${this.topic}, ${this.enquiry}`;
-    // alert(msg);
     this.submitted = true;
-    this.userService.enroll(this.userModel).subscribe(
-      data => console.log('success ', data),
-      error => this.errorMsg = error.statusText
-      );
+    return this.userService.contactForm(this.userModel).subscribe(
+data => this.userModel = data,
+error => this.errorMsg = {
+        errorTitle: error.statusText,
+        errorDesc: 'Something didnt work. Please try again.'
+      });
   }
+
 
   ngOnInit(): void {
   }
