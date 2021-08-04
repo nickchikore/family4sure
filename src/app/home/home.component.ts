@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,18 +15,10 @@ export class HomeComponent implements OnInit {
       className: 'friend-in-need',
       ref: 'friend-in-need',
       type: 'project'
-    },
-      {
-        id: 2,
-        title: 'Chidos Project',
-        url: 'family4sure/projects/friend-in-deed',
-        className: 'chido',
-        ref: 'friend-in-need',
-        type: 'project'
-      }
+    }
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }

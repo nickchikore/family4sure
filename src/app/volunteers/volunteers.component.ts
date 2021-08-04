@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-volunteers',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./volunteers.component.scss']
 })
 export class VolunteersComponent implements OnInit {
-
-  constructor() { }
+  volunteers = any;
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+  }
+
+  getVolunteers(){
+    this.http.get('localhost:3000/').subscribe( volunteers => {
+      this.volunteers = volunteers;
+    },
+        error => {
+        console.log(error);
+      });
   }
 
 }
